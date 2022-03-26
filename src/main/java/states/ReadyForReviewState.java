@@ -7,17 +7,17 @@ public class ReadyForReviewState implements State {
 
     public ReadyForReviewState(Order order) {
         this.order = order;
-        notifyCustomer("is ready for review");
+        notifyCustomer(Messages.REVIEW.getString());
     }
 
     @Override
     public void activeSearchOrder() {
-        notifyCustomer("is ready for review");
+        notifyCustomer(Messages.REVIEW.getString());
     }
 
     @Override
     public void makeReadyForReviewOrder() {
-        notifyCustomer("is ready for review");
+        notifyCustomer(Messages.REVIEW.getString());
     }
 
     @Override
@@ -27,12 +27,12 @@ public class ReadyForReviewState implements State {
 
     @Override
     public void finishOrder() {
-        notifyCustomer("is ready for review");
+        notifyCustomer(Messages.REVIEW.getString());
     }
 
     @Override
     public void cancelOrder() {
-        notifyCustomer("is ready for review");
+        notifyCustomer(Messages.REVIEW.getString());
     }
 
     @Override

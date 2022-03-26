@@ -9,20 +9,20 @@ public class FinishState implements State {
         this.order = order;
         notifyCustomer("is in process");
         if (order.getState() instanceof ActiveState) {
-            notifyFreelancer("your application has been approved");
+            notifyFreelancer(Messages.APPROVED.getString());
         } else {
-            notifyFreelancer("needs improvement");
+            notifyFreelancer(Messages.IMPROVEMENT.getString());
         }
     }
 
     @Override
     public void activeSearchOrder() {
-        notifyCustomer("is in process");
+        notifyCustomer(Messages.PROCESS.getString());
     }
 
     @Override
     public void processOrder() {
-        notifyCustomer("is already in process");
+        notifyCustomer(Messages.PROCESS.getString());
     }
 
     @Override
@@ -33,12 +33,12 @@ public class FinishState implements State {
 
     @Override
     public void finishOrder() {
-        notifyCustomer("is in process");
+        notifyCustomer(Messages.PROCESS.getString());
     }
 
     @Override
     public void cancelOrder() {
-        notifyCustomer("is in process");
+        notifyCustomer(Messages.PROCESS.getString());
     }
 
     @Override

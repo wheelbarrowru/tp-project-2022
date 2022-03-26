@@ -7,33 +7,33 @@ public class ReviewState implements State {
 
     public ReviewState(Order order) {
         this.order = order;
-        notifyFreelancer("work accepted");
-        notifyCustomer("is finished");
+        notifyFreelancer(Messages.ACCEPTED.getString());
+        notifyCustomer(Messages.FINISHED.getString());
     }
 
     @Override
     public void activeSearchOrder() {
-        notifyCustomer("is finished");
+        notifyCustomer(Messages.FINISHED.getString());
     }
 
     @Override
     public void makeReadyForReviewOrder() {
-        notifyCustomer("is finished");
+        notifyCustomer(Messages.FINISHED.getString());
     }
 
     @Override
     public void processOrder() {
-        notifyCustomer("is finished");
+        notifyCustomer(Messages.FINISHED.getString());
     }
 
     @Override
     public void finishOrder() {
-        notifyCustomer("is finished");
+        notifyCustomer(Messages.FINISHED.getString());
     }
 
     @Override
     public void cancelOrder() {
-        notifyCustomer("is finished");
+        notifyCustomer(Messages.FINISHED.getString());
     }
 
     @Override

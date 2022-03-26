@@ -9,7 +9,7 @@ public class CancelState implements State {
     public CancelState(Order order) {
         this.order = order;
         Burse.getInstance().removeOrder(order);
-        notifyCustomer("canceled");
+        notifyCustomer(Messages.CANCELED.getString());
     }
 
     @Override
@@ -20,23 +20,23 @@ public class CancelState implements State {
 
     @Override
     public void makeReadyForReviewOrder() {
-        notifyCustomer("canceled");
+        notifyCustomer(Messages.CANCELED.getString());
     }
 
     @Override
     public void processOrder() {
-        notifyCustomer("canceled");
+        notifyCustomer(Messages.CANCELED.getString());
     }
 
 
     @Override
     public void finishOrder() {
-        notifyCustomer("canceled");
+        notifyCustomer(Messages.CANCELED.getString());
     }
 
     @Override
     public void cancelOrder() {
-        notifyCustomer("is already canceled");
+        notifyCustomer(Messages.CANCELED.getString());
     }
 
     @Override

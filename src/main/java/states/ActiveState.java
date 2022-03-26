@@ -8,12 +8,12 @@ public class ActiveState implements State {
 
     public ActiveState(Order order) {
         this.order = order;
-        notifyCustomer("is active");
+        notifyCustomer(Messages.ACTIVE.getString());
     }
 
     @Override
     public void activeSearchOrder() {
-        notifyCustomer("is already active");
+        notifyCustomer(Messages.ACTIVE.getString());
     }
 
     @Override
@@ -29,7 +29,7 @@ public class ActiveState implements State {
 
     @Override
     public void finishOrder() {
-        notifyCustomer("is active");
+        notifyCustomer(Messages.ACTIVE.getString());
     }
 
     @Override
