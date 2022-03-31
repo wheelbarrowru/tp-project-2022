@@ -10,7 +10,7 @@ public enum Messages {
     IMPROVEMENT("needs improvement"),
     ACCEPTED("work accepted");
 
-    private String message;
+    private final String message;
     Messages(String message) {
         this.message=message;
     }
